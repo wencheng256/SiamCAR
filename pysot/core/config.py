@@ -128,40 +128,90 @@ __C.DATASET.GRAY = 0.0
 __C.DATASET.NAMES = ('VID', 'COCO', 'DET', 'YOUTUBEBB')
 
 __C.DATASET.VID = CN()
-__C.DATASET.VID.ROOT = 'train_dataset/vid/crop511'          # VID dataset path
-__C.DATASET.VID.ANNO = 'train_dataset/vid/train.json'
-__C.DATASET.VID.FRAME_RANGE = 100
-__C.DATASET.VID.NUM_USE = 100000  # repeat until reach NUM_USE
-
-__C.DATASET.YOUTUBEBB = CN()
-__C.DATASET.YOUTUBEBB.ROOT = 'train_dataset/yt_bb/crop511'  # YOUTUBEBB dataset path
-__C.DATASET.YOUTUBEBB.ANNO = 'train_dataset/yt_bb/train.json'
-__C.DATASET.YOUTUBEBB.FRAME_RANGE = 3
-__C.DATASET.YOUTUBEBB.NUM_USE = -1  # use all not repeat
-
-__C.DATASET.COCO = CN()
-__C.DATASET.COCO.ROOT = 'train_dataset/coco/crop511'         # COCO dataset path
-__C.DATASET.COCO.ANNO = 'train_dataset/coco/train2017.json'
-__C.DATASET.COCO.FRAME_RANGE = 1
-__C.DATASET.COCO.NUM_USE = -1
-
-__C.DATASET.DET = CN()
-__C.DATASET.DET.ROOT = 'train_dataset/det/crop511'           # DET dataset path
-__C.DATASET.DET.ANNO = 'train_dataset/det/train.json'
-__C.DATASET.DET.FRAME_RANGE = 1
-__C.DATASET.DET.NUM_USE = -1
+__C.DATASET.VID.ROOT = 'vid/crop511'
+__C.DATASET.VID.ANNO = 'vid/train.json'
+__C.DATASET.VID.FRAME_RANGE = 200
+__C.DATASET.VID.NUM_USE = 200000  # repeat until reach NUM_USE
 
 __C.DATASET.GOT = CN()
-__C.DATASET.GOT.ROOT = 'train_dataset/got10k/crop511'         # GOT dataset path
-__C.DATASET.GOT.ANNO = 'train_dataset/got10k/train.json'
-__C.DATASET.GOT.FRAME_RANGE = 50
-__C.DATASET.GOT.NUM_USE = 100000
+__C.DATASET.GOT.ROOT = 'got/crop511'
+__C.DATASET.GOT.ANNO = 'got/train.json'
+__C.DATASET.GOT.FRAME_RANGE = 300
+__C.DATASET.GOT.NUM_USE = 200000
 
-__C.DATASET.LaSOT = CN()
-__C.DATASET.LaSOT.ROOT = 'train_dataset/lasot/crop511'         # LaSOT dataset path
-__C.DATASET.LaSOT.ANNO = 'train_dataset/lasot/train.json'
-__C.DATASET.LaSOT.FRAME_RANGE = 100
-__C.DATASET.LaSOT.NUM_USE = 100000
+__C.DATASET.TEMPLE = CN()
+__C.DATASET.TEMPLE.ROOT = 'Temple/crop511'
+__C.DATASET.TEMPLE.ANNO = 'Temple/train.json'
+__C.DATASET.TEMPLE.FRAME_RANGE = 200
+__C.DATASET.TEMPLE.NUM_USE = 50000
+
+
+__C.DATASET.OTB = CN()
+__C.DATASET.OTB.ROOT = 'otb/crop511'
+__C.DATASET.OTB.ANNO = 'otb/train.json'
+__C.DATASET.OTB.FRAME_RANGE = 200
+__C.DATASET.OTB.NUM_USE = 5000
+
+
+__C.DATASET.LASOT = CN()
+__C.DATASET.LASOT.ROOT = 'Lasot/crop511'
+__C.DATASET.LASOT.ANNO = 'Lasot/train.json'
+__C.DATASET.LASOT.FRAME_RANGE = 800
+__C.DATASET.LASOT.NUM_USE = 400000
+
+__C.DATASET.YOUTUBEBB = CN()
+__C.DATASET.YOUTUBEBB.ROOT = 'yt_bb/crop511'
+__C.DATASET.YOUTUBEBB.ANNO = 'yt_bb/train.json'
+__C.DATASET.YOUTUBEBB.FRAME_RANGE = 20
+__C.DATASET.YOUTUBEBB.NUM_USE = 200000  # use all not repeat
+
+__C.DATASET.COCO = CN()
+__C.DATASET.COCO.ROOT = 'coco/crop511'
+__C.DATASET.COCO.ANNO = 'coco/train2017.json'
+__C.DATASET.COCO.FRAME_RANGE = 1
+__C.DATASET.COCO.NUM_USE = 200000
+
+__C.DATASET.DET = CN()
+__C.DATASET.DET.ROOT = 'det/crop511'
+__C.DATASET.DET.ANNO = 'det/train.json'
+__C.DATASET.DET.FRAME_RANGE = 1
+__C.DATASET.DET.NUM_USE = 200000
+
+__C.DATASET.FT1 = CN()
+__C.DATASET.FT1.ROOT = 'finetune1/crop511'
+__C.DATASET.FT1.ANNO = 'finetune1/train.json'
+__C.DATASET.FT1.FRAME_RANGE = 1
+__C.DATASET.FT1.NUM_USE = 30000
+
+__C.DATASET.FT2 = CN()
+__C.DATASET.FT2.ROOT = 'finetune2/crop511'
+__C.DATASET.FT2.ANNO = 'finetune2/train.json'
+__C.DATASET.FT2.FRAME_RANGE = 200
+__C.DATASET.FT2.NUM_USE = 50000
+
+__C.DATASET.VOT = CN()
+__C.DATASET.VOT.ROOT = 'VOT2016/crop511'
+__C.DATASET.VOT.ANNO = 'VOT2016/train.json'
+__C.DATASET.VOT.FRAME_RANGE = 1
+__C.DATASET.VOT.NUM_USE = 30000
+
+__C.DATASET.FT = CN()
+__C.DATASET.FT.ROOT = 'finetune/crop511'
+__C.DATASET.FT.ANNO = 'finetune/train.json'
+__C.DATASET.FT.FRAME_RANGE = 1
+__C.DATASET.FT.NUM_USE = 30000
+
+__C.DATASET.VOTFULL = CN()
+__C.DATASET.VOTFULL.ROOT = 'VOT_FULL/crop511'
+__C.DATASET.VOTFULL.ANNO = 'VOT_FULL/train.json'
+__C.DATASET.VOTFULL.FRAME_RANGE = 200
+__C.DATASET.VOTFULL.NUM_USE = -1
+
+__C.DATASET.VOT2018 = CN()
+__C.DATASET.VOT2018.ROOT = 'VOT2018/crop511'
+__C.DATASET.VOT2018.ANNO = 'VOT2018/train.json'
+__C.DATASET.VOT2018.FRAME_RANGE = 1
+__C.DATASET.VOT2018.NUM_USE = 30000
 
 __C.DATASET.VIDEOS_PER_EPOCH = 600000 #600000
 # ------------------------------------------------------------------------ #
