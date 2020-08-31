@@ -33,7 +33,7 @@ class SubDataset(object):
         cur_path = os.path.dirname(os.path.realpath(__file__))
         self.name = name
         self.root = root
-        self.anno = os.path.join(cur_path, '../../', anno)
+        self.anno = os.path.join('/raid/dxp/datasets/crops', anno)
         self.frame_range = frame_range
         self.num_use = num_use
         self.start_idx = start_idx
