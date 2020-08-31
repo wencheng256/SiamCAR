@@ -243,6 +243,15 @@ class TrkDataset(Dataset):
         search_image = cv2.imread(search[0])
         if template_image is None:
             print('error image:',template[0])
+        
+        
+        if template_image is None:
+            template_image = cv2.imread("/raid/dxp/datasets/crops/vid/crop511/a/ILSVRC2015_train_00000000/000072.00.z.jpg")
+            print("image is None", template[0])
+
+        if search_image is None:
+            search_image = cv2.imread("/raid/dxp/datasets/crops/vid/crop511/a/ILSVRC2015_train_00000000/000072.00.x.jpg")
+            print("image is None", search[0])
 
         # get bounding box
         template_box = self._get_bbox(template_image, template[1])
